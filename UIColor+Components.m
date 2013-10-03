@@ -14,6 +14,15 @@
     return CGColorGetAlpha([self CGColor]);
 }
 
+- (UIColor *)colorWithoutAlpha{
+    return [UIColor colorWithColor:self andAlpha:1];
+}
+
++ (UIColor *)colorWithColor:(UIColor *)color andAlpha:(CGFloat)alpha{
+    NSArray *component = [color componentArray];
+    return [UIColor colorWithRed:[component[0] doubleValue] green:[component[1] doubleValue] blue:[component[2] doubleValue] alpha:alpha];
+}
+
 - (NSArray *)componentArray{
     CGFloat red, green, blue, alpha;
     const CGFloat *components = CGColorGetComponents([self CGColor]);

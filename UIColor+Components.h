@@ -10,7 +10,10 @@
 
 @interface UIColor(Components)
 
++ (UIColor *)colorWithColor:(UIColor *)color andAlpha:(CGFloat)alpha;
+
 - (CGFloat)alphaComponent;
+- (UIColor *)colorWithoutAlpha;
 - (NSArray *)componentArray;
 
 @end
