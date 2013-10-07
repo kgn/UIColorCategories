@@ -11,5 +11,6 @@
 @interface UIColor(Modify)
 
 - (UIColor *)invertedColor;
+- (UIColor *)colorForTranslucency;
 
 @end
