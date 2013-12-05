@@ -13,4 +13,6 @@
 - (UIColor *)invertedColor;
 - (UIColor *)colorForTranslucency;
 
+- (UIColor *)darkenColor:(CGFloat)darken;
+
 @end
